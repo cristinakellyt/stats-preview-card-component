@@ -25,14 +25,83 @@ html {
 
 body {
   font-size: 1.5rem;
+  background-color: var(--very-dark-blue);
+  color: var(--white-transparent-1);
+  font-family: 'Inter', sans-serif;
 }
 
-img {
-  display: block;
-  max-width: 100%;
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  justify-content: center;
+  align-content: center;
+  margin: 2rem;
+  background-color: var(--dark-desaturated-blue);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 6rem;
+}
+
+.heading-primary {
+  font-size: 3.4rem;
+  color: var(--white);
+}
+
+.heading-primary span {
+  color: var(--soft-violet);
+}
+
+.card__text p {
+  max-width: 90%;
+  line-height: 1.6;
+}
+
+.card__data {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  width: 90%;
+  margin-top: 5rem;
+}
+
+.card__data > * {
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: var(--white);
+  line-height: 0.5;
+}
+
+.card__data > * span {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: var(--white-transparent-2);
+  letter-spacing: 1px;
+}
+
+.card__image {
+  background-image: linear-gradient(
+      to right bottom,
+      hsla(277, 56%, 34%, 0.61),
+      hsla(277, 56%, 34%, 0.61)
+    ),
+    url(../images/image-header-desktop.jpg);
+  background-size: cover;
+  background-position: center;
+  filter: contrast(110%);
+  width: 100%;
 }
