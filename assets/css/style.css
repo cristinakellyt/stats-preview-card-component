@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
 
+/***** GLOBAL SETTINGS *****/
+
 :root {
   --very-dark-blue: hsl(233, 47%, 7%);
   --dark-desaturated-blue: hsl(244, 38%, 16%);
@@ -36,6 +38,8 @@ main {
   justify-content: center;
   min-height: 100vh;
 }
+
+/***** CARD COMPONENT *****/
 
 .card {
   display: grid;
@@ -108,6 +112,8 @@ main {
   width: 100%;
 }
 
+/***** MEDIA QUERY *****/
+
 @media only screen and (max-width: 56em) {
   html {
     font-size: 55%;
@@ -179,4 +185,14 @@ main {
     gap: 3rem;
     margin-top: 1rem;
   }
+}
+
+/***** FOOTER *****/
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
