@@ -166,7 +166,7 @@ main {
   }
 }
 
-@media only screen and (max-width: 24rem) {
+@media only screen and (max-width: 24em) {
   .card {
     grid-template-rows: 1fr 2fr;
   }
