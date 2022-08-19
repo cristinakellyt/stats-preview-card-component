@@ -39,23 +39,26 @@ main {
 
 .card {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: 1fr 1fr;
+  max-width: 115rem;
   justify-content: center;
   align-content: center;
   margin: 2rem;
   background-color: var(--dark-desaturated-blue);
   border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 1rem 4rem #000000;
 }
 
 .card__text {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  padding: 6rem;
+  padding: 7rem 3rem 7rem 7rem;
 }
 
 .heading-primary {
+  width: 90%;
   font-size: 3.4rem;
   color: var(--white);
 }
@@ -65,16 +68,15 @@ main {
 }
 
 .card__text p {
-  max-width: 90%;
   line-height: 1.6;
+  max-width: 80%;
 }
 
 .card__data {
   display: flex;
   justify-content: space-between;
-  flex-flow: row wrap;
-  width: 90%;
-  margin-top: 5rem;
+  max-width: 80%;
+  margin-top: 4rem;
 }
 
 .card__data > * {
@@ -104,4 +106,77 @@ main {
   background-position: center;
   filter: contrast(110%);
   width: 100%;
+}
+
+@media only screen and (max-width: 56em) {
+  html {
+    font-size: 55%;
+  }
+
+  .card__text {
+    padding: 3rem;
+    font-size: 1.6rem;
+  }
+
+  .card__data {
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 38em) {
+  .card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .card__text {
+    grid-row: 2/3;
+    align-items: center;
+  }
+
+  .card__text p {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .heading-primary {
+    text-align: center;
+  }
+
+  .card__data {
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 2rem;
+  }
+
+  .card__image {
+    background-image: linear-gradient(
+        to right bottom,
+        hsla(277, 56%, 34%, 0.61),
+        hsla(277, 56%, 34%, 0.61)
+      ),
+      url(../images/image-header-mobile.jpg);
+    grid-row: 1/2;
+  }
+}
+
+@media only screen and (max-width: 24rem) {
+  .card {
+    grid-template-rows: 1fr 2fr;
+  }
+
+  .card__text {
+    padding: 4rem 3rem;
+  }
+
+  .card__text > p {
+    width: 90%;
+  }
+
+  .card__data {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 1rem;
+  }
 }
